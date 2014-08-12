@@ -10,8 +10,8 @@ APPS_CONFIG_DIR="/data/conf"
 LAUNCHER_CONFIG_DIR="$APPS_CONFIG_DIR/launcher/conf.d"
 LAUNCHER_CONFIG_FILE="$LAUNCHER_CONFIG_DIR/$PROGRAM_NAME.conf"
 
-ICON="./res/icon.png"
-PRESSED_ICON="./res/icon.png"
+ICON="./res/wps_normal.png"
+PRESSED_ICON="./res/wps_pressed.png"
 
 PID_FILE="$CURWDIR/$PROGRAM_NAME.pid"
 PKILL_BIN="/usr/bin/pkill"
