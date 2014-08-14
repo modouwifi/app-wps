@@ -47,6 +47,20 @@ config() {
 
     $INSTALL_BIN -d $LAUNCHER_CONFIG_DIR
     $INSTALL_BIN "$PROGRAM_NAME.conf" "$LAUNCHER_CONFIG_FILE"
+
+    echo "{" > "$CUSTOM_CONFIG_FILE"
+    echo "\"title\" : \"$TITLE\"," >> "$CUSTOM_CONFIG_FILE"
+    echo " \"content\" : \"点击开始，然后按住无线设备的wps按钮，即可实现wps连接\"," >> "$CUSTOM_CONFIG_FILE"
+    echo "  \"button1\" :   {" >> "$CUSTOM_CONFIG_FILE"
+    echo "    \"txt\" : \"开始\"," >> "$CUSTOM_CONFIG_FILE"
+    echo "    \"cmd\" : \"$CURWDIR/start-wps.sh\"," >> "$CUSTOM_CONFIG_FILE"
+    echo "    \"code\" : {" >> "$CUSTOM_CONFIG_FILE"
+    echo " \"0\" : \"执行成功\" " >> "$CUSTOM_CONFIG_FILE"
+    echo "    }"  >> "$CUSTOM_CONFIG_FILE"
+    echo "  }  " >> "$CUSTOM_CONFIG_FILE"
+    echo "}   " >> "$CUSTOM_CONFIG_FILE"
+
+
 }
 
 uninstall() {
