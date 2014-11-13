@@ -1,10 +1,11 @@
 {
         "package_id"      : "com.modouwifi.app-wps",
-        "name"            : "WPS一键连",
+        "name"            : "app-wps",
+        "display_name"    " "WPS一键连",
         "author"          : "魔豆开发团队-阿耀",
         "author_mail"     : "zhouyao@mochui.net",
         "homepage"        : "www.modouwifi.com",
-        "version"         : "0.6",
+        "version"         : "0.6.1",
         "release_date"    : "2014.08.11",
         "icon"            : "./res/wps_normal.png",
         "location"        : "internal",
