@@ -27,21 +27,10 @@ usage() {
 start() {
     rm /tmp/wps-count
     /system/sbin/wps.sh 
-    #progress -t WPS一键连 -m 请在30秒内按下设备上的wps按键,连接成功后可选择退出。 -p $CURWDIR/calc-progress.sh &
-    progress -t WPS一键连 -m 请在30秒内按下设备上的wps按键,连接成功后可选择退出。 -j $CURWDIR/calc-progress.sh -p /tmp/wps-count &
+    $CURWDIR/progress -t WPS一键连 -m 请在30秒内按下设备上的wps按键,连接成功后可选择退出。 -j $CURWDIR/calc-progress.sh -p /tmp/wps-percent &
 }
 
-# start() {
-#     # $CUSTOM_BIN "$CUSTOM_CONFIG_FILE" &
-#     # [ "$!""XXX" != "XXX" ] && echo "$!" > $PID_FILE
-#     run
-# }
-
 stop() {
-    # if [ -f $PID_FILE ]; then
-    #     kill  `cat "$PID_FILE"`
-    #     $REMOVE $PID_FILE
-    # fi
     echo "not implemented"
 }
 
@@ -58,18 +47,6 @@ config() {
 
     $INSTALL_BIN -d $LAUNCHER_CONFIG_DIR
     $INSTALL_BIN "$PROGRAM_NAME.conf" "$LAUNCHER_CONFIG_FILE"
-
-    # echo "{" > "$CUSTOM_CONFIG_FILE"
-    # echo "\"title\" : \"$TITLE\"," >> "$CUSTOM_CONFIG_FILE"
-    # echo " \"content\" : \"点击开始，然后按住无线设备的wps按钮，即可实现wps连接\"," >> "$CUSTOM_CONFIG_FILE"
-    # echo "  \"button1\" :   {" >> "$CUSTOM_CONFIG_FILE"
-    # echo "    \"txt\" : \"开始\"," >> "$CUSTOM_CONFIG_FILE"
-    # echo "    \"cmd\" : \"$CURWDIR/start-wps.sh\"," >> "$CUSTOM_CONFIG_FILE"
-    # echo "    \"code\" : {" >> "$CUSTOM_CONFIG_FILE"
-    # echo " \"0\" : \"执行成功\" " >> "$CUSTOM_CONFIG_FILE"
-    # echo "    }"  >> "$CUSTOM_CONFIG_FILE"
-    # echo "  }  " >> "$CUSTOM_CONFIG_FILE"
-    # echo "}   " >> "$CUSTOM_CONFIG_FILE"
 }
 
 uninstall() {
