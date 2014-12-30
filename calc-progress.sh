@@ -1,7 +1,7 @@
 #!/bin/sh
 
 COUNT_FILE=/tmp/wps-count
-PERCENT_FILE/tmp/wps-percent
+PERCENT_FILE=/tmp/wps-percent
 
 if [ ! -f $COUNT_FILE ] ; then
     echo 0 > $COUNT_FILE
